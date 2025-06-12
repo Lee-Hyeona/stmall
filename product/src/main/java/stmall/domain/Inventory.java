@@ -24,7 +24,7 @@ public class Inventory {
 
     private String name;
 
-    private Integer stock;
+    private String stock;
 
     public static InventoryRepository repository() {
         InventoryRepository inventoryRepository = ProductApplication.applicationContext.getBean(
@@ -63,7 +63,7 @@ public class Inventory {
 
     //>>> Clean Arch / Port Method
     //<<< Clean Arch / Port Method
-    public static void increaseStock(DeliveryReturned deliveryReturned) {
+    public static void increaseStock(Deliveryreturned deliveryreturned) {
         //implement business logic here:
 
         /** Example 1:  new item 
@@ -77,7 +77,7 @@ public class Inventory {
         /** Example 2:  finding and process
         
 
-        repository().findById(deliveryReturned.get???()).ifPresent(inventory->{
+        repository().findById(deliveryreturned.get???()).ifPresent(inventory->{
             
             inventory // do something
             repository().save(inventory);

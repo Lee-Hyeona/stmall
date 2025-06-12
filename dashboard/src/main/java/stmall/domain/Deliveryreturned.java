@@ -6,7 +6,7 @@ import lombok.Data;
 import stmall.infra.AbstractEvent;
 
 @Data
-public class DeliveryCompleted extends AbstractEvent {
+public class Deliveryreturned extends AbstractEvent {
 
     private Long id;
     private Long orderId;

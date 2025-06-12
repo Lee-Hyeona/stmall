@@ -25,8 +25,8 @@ export default {
     setup() {
         const headers = ref([
             // 필드 디스크립터를 기반으로 헤더 설정
-            { title: "orderId", key: "orderId" },
-            { title: "customerId", key: "customerId" },
+            { title: "orderid", key: "orderid" },
+            { title: "customerid", key: "customerid" },
             { title: "itemId", key: "itemId" },
             { title: "qty", key: "qty" },
             { title: "address", key: "address" },

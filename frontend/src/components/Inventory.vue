@@ -5,7 +5,7 @@
             v-model="value.name"
             :editMode="editMode"
         />
-        <Number
+        <String
             label="Stock"
             v-model="value.stock"
             :editMode="editMode"

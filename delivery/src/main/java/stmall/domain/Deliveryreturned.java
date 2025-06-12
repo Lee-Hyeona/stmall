@@ -9,17 +9,20 @@ import stmall.infra.AbstractEvent;
 //<<< DDD / Domain Event
 @Data
 @ToString
-public class StockDecreased extends AbstractEvent {
+public class Deliveryreturned extends AbstractEvent {
 
     private Long id;
-    private String name;
-    private String stock;
+    private Long orderId;
+    private String customerId;
+    private String itemId;
+    private Integer qty;
+    private String address;
 
-    public StockDecreased(Inventory aggregate) {
+    public Deliveryreturned(Delivery aggregate) {
         super(aggregate);
     }
 
-    public StockDecreased() {
+    public Deliveryreturned() {
         super();
     }
 }

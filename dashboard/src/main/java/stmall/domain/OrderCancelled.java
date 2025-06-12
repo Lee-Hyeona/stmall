@@ -10,7 +10,7 @@ public class OrderCancelled extends AbstractEvent {
 
     private Long id;
     private String customerId;
-    private String itemId;
+    private String ItemId;
     private Integer qty;
     private String address;
 }

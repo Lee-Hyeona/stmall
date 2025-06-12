@@ -43,16 +43,16 @@ public class PolicyHandler {
         value = KafkaProcessor.INPUT,
         condition = "headers['type']=='OrderCancelled'"
     )
-    public void wheneverOrderCancelled_CancelDelivery(
+    public void wheneverOrderCancelled_CancellDelivery(
         @Payload OrderCancelled orderCancelled
     ) {
         OrderCancelled event = orderCancelled;
         System.out.println(
-            "\n\n##### listener CancelDelivery : " + orderCancelled + "\n\n"
+            "\n\n##### listener CancellDelivery : " + orderCancelled + "\n\n"
         );
 
         // Sample Logic //
-        Delivery.cancelDelivery(event);
+        Delivery.cancellDelivery(event);
     }
 }
 //>>> Clean Arch / Inbound Adaptor
