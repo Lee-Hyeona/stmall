@@ -1,7 +1,7 @@
 # 
 
 ## Model
-www.msaez.io/#/courses/cna-full/2c7ffd60-3a9c-11f0-833f-b38345d437ae/event-design
+www.msaez.io/#/119604196/storming/09a408b2fc1593ce174cd486230faca8
 
 ## Before Running Services
 ### Make sure there is a Kafka server running
@@ -35,11 +35,11 @@ mvn spring-boot:run
 ## Test by API
 - order
 ```
- http :8088/orders id="id"customerId="customerId"itemId="ItemId"qty="qty"address="address"status="status"
+ http :8088/orders id="id"customerId="customerId"itemId="itemId"qty="qty"address="address"status="status"
 ```
 - delivery
 ```
- http :8088/deliveries id="id"orderId="orderId"customerId="customerId"itemId="ItemId"qty="qty"address="address"status="status"
+ http :8088/deliveries id="id"orderId="orderId"customerId="customerId"itemId="itemId"qty="qty"address="address"status="status"
 ```
 - product
 ```

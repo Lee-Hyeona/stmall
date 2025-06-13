@@ -41,14 +41,14 @@ public class PolicyHandler {
 
     @StreamListener(
         value = KafkaProcessor.INPUT,
-        condition = "headers['type']=='DeliveryCompleted'"
+        condition = "headers['type']=='DeliveryReturned'"
     )
-    public void wheneverDeliveryCompleted_UpdateStatus(
-        @Payload DeliveryCompleted deliveryCompleted
+    public void wheneverDeliveryReturned_UpdateStatus(
+        @Payload DeliveryReturned deliveryReturned
     ) {
-        DeliveryCompleted event = deliveryCompleted;
+        DeliveryReturned event = deliveryReturned;
         System.out.println(
-            "\n\n##### listener UpdateStatus : " + deliveryCompleted + "\n\n"
+            "\n\n##### listener UpdateStatus : " + deliveryReturned + "\n\n"
         );
 
         // Sample Logic //
@@ -57,14 +57,14 @@ public class PolicyHandler {
 
     @StreamListener(
         value = KafkaProcessor.INPUT,
-        condition = "headers['type']=='Deliveryreturned'"
+        condition = "headers['type']=='DeliveryCompleted'"
     )
-    public void wheneverDeliveryreturned_UpdateStatus(
-        @Payload Deliveryreturned deliveryreturned
+    public void wheneverDeliveryCompleted_UpdateStatus(
+        @Payload DeliveryCompleted deliveryCompleted
     ) {
-        Deliveryreturned event = deliveryreturned;
+        DeliveryCompleted event = deliveryCompleted;
         System.out.println(
-            "\n\n##### listener UpdateStatus : " + deliveryreturned + "\n\n"
+            "\n\n##### listener UpdateStatus : " + deliveryCompleted + "\n\n"
         );
 
         // Sample Logic //

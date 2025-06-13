@@ -12,8 +12,11 @@ import lombok.Data;
 @Data
 public class Mypage {
 
-    private Long orderid;
-    private String customerid;
+    @Id
+    //@GeneratedValue(strategy=GenerationType.AUTO)
+    private Long orderId;
+
+    private String customerId;
     private String itemId;
     private Integer qty;
     private String address;

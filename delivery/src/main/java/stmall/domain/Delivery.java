@@ -10,7 +10,7 @@ import javax.persistence.*;
 import lombok.Data;
 import stmall.DeliveryApplication;
 import stmall.domain.DeliveryCompleted;
-import stmall.domain.Deliveryreturned;
+import stmall.domain.DeliveryReturned;
 
 @Entity
 @Table(name = "Delivery_table")
@@ -71,15 +71,15 @@ public class Delivery {
 
     //>>> Clean Arch / Port Method
     //<<< Clean Arch / Port Method
-    public static void cancellDelivery(OrderCancelled orderCancelled) {
+    public static void cancelDelivery(OrderCancelled orderCancelled) {
         //implement business logic here:
 
         /** Example 1:  new item 
         Delivery delivery = new Delivery();
         repository().save(delivery);
 
-        Deliveryreturned deliveryreturned = new Deliveryreturned(delivery);
-        deliveryreturned.publishAfterCommit();
+        DeliveryReturned deliveryReturned = new DeliveryReturned(delivery);
+        deliveryReturned.publishAfterCommit();
         */
 
         /** Example 2:  finding and process
@@ -90,8 +90,8 @@ public class Delivery {
             delivery // do something
             repository().save(delivery);
 
-            Deliveryreturned deliveryreturned = new Deliveryreturned(delivery);
-            deliveryreturned.publishAfterCommit();
+            DeliveryReturned deliveryReturned = new DeliveryReturned(delivery);
+            deliveryReturned.publishAfterCommit();
 
          });
         */

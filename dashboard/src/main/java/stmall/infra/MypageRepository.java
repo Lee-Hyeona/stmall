@@ -7,6 +7,4 @@ import stmall.domain.*;
 
 @RepositoryRestResource(collectionResourceRel = "mypages", path = "mypages")
 public interface MypageRepository
-    extends PagingAndSortingRepository<Mypage, Long> {
-    List<Mypage> findByOrderid(Long orderid);
-}
+    extends PagingAndSortingRepository<Mypage, Long> {}
